@@ -1,0 +1,60 @@
+@tailwind preflight;
+
+.none-background {
+    background-image: repeating-linear-gradient(90deg, #eee, #eee .25rem, #fff .25rem, #fff .5rem);
+}
+
+.grid {
+    display: grid;
+}
+.span2 {
+    grid-column: span 2;
+}
+.span3 {
+    grid-column: span 3;
+}
+
+.colorpickergrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+
+.colorpickergrid  > button:nth-child(2),
+.colorpickergrid  > button:nth-child(3) {
+    @apply .span3;
+}
+
+.contentgrid {
+    display: grid;
+    grid-template-columns: minmax(0, 55rem) minmax(20rem, 1fr);
+    align-items: start;
+    grid-gap: 2rem;
+}
+
+.pickergrid {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+}
+
+.transition-all {
+    transition: all 0.5s ease-out;
+}
+
+.buttons-column > button:last-child {
+    @apply .rounded-t;
+}
+
+.buttons-column > button:first-child {
+    @apply .rounded-b;
+}
+
+.buttons-row > button:first-child {
+    @apply .rounded-l;
+}
+
+.buttons-row > button:last-child {
+    @apply .rounded-r;
+}
+
+@tailwind utilities;
